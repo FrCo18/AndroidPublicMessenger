@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#292828"
+    tools:context=".ProfileActivity">
+
+    <TextView
+        android:id="@+id/tvEmailProfile"
+        android:layout_width="0dp"
+        android:layout_height="74dp"
+        android:layout_marginBottom="24dp"
+        android:background="#221D1D"
+        android:gravity="center"
+        android:inputType="textMultiLine"
+        android:text="Email"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvNameProfile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSecNameProfile"
+        android:layout_width="0dp"
+        android:layout_height="74dp"
+        android:layout_marginBottom="16dp"
+        android:background="#221D1D"
+        android:gravity="center"
+        android:inputType="textMultiLine"
+        android:text="Фамилия"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvLocationProfile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvLocationProfile"
+        android:layout_width="0dp"
+        android:layout_height="74dp"
+        android:layout_marginBottom="24dp"
+        android:background="#221D1D"
+        android:gravity="center"
+        android:inputType="textMultiLine"
+        android:text="Местонахождение"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvStatusProfile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvStatusProfile"
+        android:layout_width="0dp"
+        android:layout_height="74dp"
+        android:layout_marginBottom="156dp"
+        android:background="#221D1D"
+        android:gravity="center"
+        android:inputType="textMultiLine"
+        android:text="Статус"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvNameProfile"
+        android:layout_width="0dp"
+        android:layout_height="74dp"
+        android:layout_marginBottom="24dp"
+        android:background="#221D1D"
+        android:gravity="center"
+        android:inputType="textMultiLine"
+        android:text="Имя"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvSecNameProfile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnBackProfile"
+        android:layout_width="145dp"
+        android:layout_height="76dp"
+        android:layout_marginBottom="56dp"
+        android:onClick="onClickBackFromProfile"
+        android:text="назад"
+        app:backgroundTint="#132CB6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#292828"
+    tools:context=".AuthActivity">
+
+    <EditText
+        android:id="@+id/edPasswordLogin"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="40dp"
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/edEmailLogin"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edEmailLogin"
+        app:layout_constraintTop_toBottomOf="@+id/edEmailLogin" />
+
+    <EditText
+        android:id="@+id/edEmailLogin"
+        android:layout_width="281dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="152dp"
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="36dp"
+        android:onClick="onCLickLogin"
+        android:text="Войти"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/edEmailLogin"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edEmailLogin"
+        app:layout_constraintTop_toBottomOf="@+id/edPasswordLogin" />
+
+    <Button
+        android:id="@+id/btnRegisterLogin"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="40dp"
+        android:onClick="onClickRegister"
+        android:text="Зарегистрироваться"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/edEmailLogin"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edEmailLogin"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#292828"
+    tools:context=".RegisterActivity">
+
+    <EditText
+        android:id="@+id/edRegPassword"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="32dp"
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/edRegEmail"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edRegEmail"
+        app:layout_constraintTop_toBottomOf="@+id/edRegEmail" />
+
+    <EditText
+        android:id="@+id/edRegRepeatPassword"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="44dp"
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:hint="Repeat password"
+        android:inputType="textPassword"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/edRegEmail"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edRegEmail"
+        app:layout_constraintTop_toBottomOf="@+id/edRegPassword" />
+
+    <Button
+        android:id="@+id/btnCreateAccount"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="44dp"
+        android:onClick="onClickCreateAccount"
+        android:text="Создать аккаунт"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/edRegEmail"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edRegEmail"
+        app:layout_constraintTop_toBottomOf="@+id/edRegRepeatPassword" />
+
+    <EditText
+        android:id="@+id/edRegEmail"
+        android:layout_width="281dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="136dp"
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="32dp"
+        android:onClick="onClickBack"
+        android:text="Назад"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/edRegEmail"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edRegEmail"
+        app:layout_constraintTop_toBottomOf="@+id/btnCreateAccount" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3A3939"
+    tools:context=".EditProfileActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <EditText
+            android:id="@+id/edNameEdit"
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:layout_marginBottom="16dp"
+            android:background="#221D1D"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:paddingLeft="30dp"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toTopOf="@+id/tvSecNameEdit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvLocationEdit"
+            android:layout_width="411dp"
+            android:layout_height="54dp"
+            android:layout_marginBottom="16dp"
+            android:background="#221D1D"
+            android:gravity="center"
+            android:text="Местоположение"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/edLocationEdit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/edLocationEdit"
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:layout_marginBottom="228dp"
+            android:background="#221D1D"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:paddingLeft="30dp"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvSecNameEdit"
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:layout_marginBottom="16dp"
+            android:background="#221D1D"
+            android:gravity="center"
+            android:text="Фамилия"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/edSecNameEdit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/edSecNameEdit"
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:layout_marginBottom="16dp"
+            android:background="#221D1D"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:paddingLeft="30dp"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toTopOf="@+id/tvLocationEdit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvNameEdit"
+            android:layout_width="411dp"
+            android:layout_height="54dp"
+            android:layout_marginBottom="20dp"
+            android:background="#221D1D"
+            android:gravity="center"
+            android:text="Имя"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/edNameEdit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btnSaveEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:onClick="onClickSaveEdit"
+            android:text="Сохранить"
+            app:backgroundTint="#132CB6"
+            app:layout_constraintBottom_toTopOf="@+id/btnBackEdit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btnBackEdit"
+            android:layout_width="128dp"
+            android:layout_height="43dp"
+            android:layout_marginBottom="64dp"
+            android:onClick="onClickBack"
+            android:text="Назад"
+            app:backgroundTint="#132CB6"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
