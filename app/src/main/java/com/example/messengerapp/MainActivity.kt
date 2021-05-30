@@ -21,7 +21,6 @@ class MainActivity : AppCompatActivity(), RecyclerChatAdapter.OnItemClickListene
     private var customAdapter: RecyclerChatAdapter? = null
     private var dbHelper: DbHelper = DbHelper()
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)

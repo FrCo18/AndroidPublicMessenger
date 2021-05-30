@@ -20,7 +20,6 @@ class AuthActivity : AppCompatActivity() {
         initFields()
     }
 
-
     private fun initFields() {
         mAuth = FirebaseAuth.getInstance()
         if (mAuth!!.currentUser != null) {
