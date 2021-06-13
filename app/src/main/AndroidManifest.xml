@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MessengerApp">
-        <activity android:name=".ProfileActivity"></activity>
+        <activity android:name=".TestActivity"></activity>
+        <activity android:name=".ProfileActivity" />
         <activity android:name=".EditProfileActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".AuthActivity">

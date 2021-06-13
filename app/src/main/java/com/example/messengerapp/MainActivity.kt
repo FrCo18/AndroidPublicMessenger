@@ -1,6 +1,8 @@
 package com.example.messengerapp
 
+import android.annotation.SuppressLint
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -21,12 +23,18 @@ class MainActivity : AppCompatActivity(), RecyclerChatAdapter.OnItemClickListene
     private var customAdapter: RecyclerChatAdapter? = null
     private var dbHelper: DbHelper = DbHelper()
 
+    @SuppressLint("SourceLockedOrientationActivity")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         initFields()
         getDataFromBd()
+    }
+
+    fun openTestActivity(view: View) {
+        val i = Intent(this, TestActivity::class.java)
+        startActivity(i)
     }
 
     private fun initFields() {

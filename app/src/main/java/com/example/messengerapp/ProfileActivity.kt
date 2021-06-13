@@ -2,6 +2,7 @@ package com.example.messengerapp
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -24,6 +25,7 @@ class ProfileActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         initFields()
         getDataFromDb()
     }
