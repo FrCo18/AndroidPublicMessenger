@@ -46,7 +46,7 @@
             android:gravity="start"
             android:hint="Сообщение"
             android:inputType="text|textMultiLine"
-            android:paddingLeft="10sp"
+            android:paddingLeft="15sp"
             android:textIsSelectable="false"
             app:layout_constraintBottom_toTopOf="@+id/clNav"
             app:layout_constraintEnd_toEndOf="parent"
