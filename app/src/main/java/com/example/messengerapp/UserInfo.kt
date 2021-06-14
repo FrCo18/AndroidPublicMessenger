@@ -5,6 +5,7 @@ data class UserInfo(
     var name: String = "",
     var secName: String = "",
     var location: String = "",
+    var chatKeyList: ArrayList<String>? = null,
     var status: String = ""
 )
 

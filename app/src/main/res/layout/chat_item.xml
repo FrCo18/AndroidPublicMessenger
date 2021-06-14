@@ -51,5 +51,23 @@
             android:inputType="textMultiLine|text"
             android:text="Message"
             android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnDeleteMsg"
+            android:layout_width="55dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="56dp"
+            android:background="@color/purple_200"
+            android:gravity="center"
+            android:padding="0dp"
+            android:text="Удалить"
+            android:textSize="7sp"
+            android:visibility="visible" />
+
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

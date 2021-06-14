@@ -78,6 +78,8 @@ class EditProfileActivity : AppCompatActivity() {
                                 edName!!.text.toString(),
                                 edSecName!!.text.toString(),
                                 edLocation!!.text.toString(),
+                                userInfo.chatKeyList
+                                ,
                                 "online"
                             )
                         )

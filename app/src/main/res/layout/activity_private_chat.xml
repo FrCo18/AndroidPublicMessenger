@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/menuChatMain"
+    android:id="@+id/privateChat"
     android:background="#000000"
-    tools:context=".MainActivity">
+    tools:context=".PrivateChat">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -37,6 +37,21 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <EditText
+            android:id="@+id/edMessage"
+            android:layout_width="411dp"
+            android:layout_height="92dp"
+            android:background="#F4DEDE"
+            android:ems="10"
+            android:gravity="start"
+            android:hint="Сообщение"
+            android:inputType="text|textMultiLine"
+            android:paddingLeft="10sp"
+            android:textIsSelectable="false"
+            app:layout_constraintBottom_toTopOf="@+id/clNav"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/clNav"
             android:layout_width="408dp"
@@ -47,23 +62,9 @@
             app:layout_constraintStart_toStartOf="parent">
 
             <Button
-                android:id="@+id/btnMainChat"
-                android:layout_width="wrap_content"
-                android:layout_height="52dp"
-                android:background="#000000"
-                android:onClick="onClickEditProfile"
-                android:text="Редактировать профиль"
-                app:backgroundTint="#600370"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/btnSendMessage"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <Button
                 android:id="@+id/btnSendMessage"
-                android:layout_width="wrap_content"
-                android:layout_height="52dp"
+                android:layout_width="212dp"
+                android:layout_height="57dp"
                 android:background="#000000"
                 android:onClick="onClickSend"
                 android:text="Отправить"
@@ -71,23 +72,10 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/btnMainChat"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <EditText
-            android:id="@+id/edMessage"
-            android:layout_width="411dp"
-            android:layout_height="92dp"
-            android:background="#F4DEDE"
-            android:ems="10"
-            android:gravity="start"
-            android:hint="Сообщение"
-            android:inputType="text|textMultiLine"
-            android:textIsSelectable="false"
-            app:layout_constraintBottom_toTopOf="@+id/clNav"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.navigation.NavigationView
@@ -98,9 +86,6 @@
         app:menu="@menu/nav_drawer_menu"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
-        app:itemTextColor="@color/white"
-        android:background="#191515"
         />
-
 
 </androidx.drawerlayout.widget.DrawerLayout>

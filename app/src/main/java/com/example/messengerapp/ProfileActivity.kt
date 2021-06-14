@@ -22,6 +22,7 @@ class ProfileActivity : AppCompatActivity() {
     private var tvStatus: TextView? = null
     private val dbHelper = DbHelper()
 
+    @SuppressLint("SourceLockedOrientationActivity")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
@@ -72,7 +73,14 @@ class ProfileActivity : AppCompatActivity() {
     }
 
     fun onClickBackFromProfile(view: View) {
-        val i = Intent(this, MainActivity::class.java)
-        startActivity(i)
+        if (intent.extras!!.get("backDisplay").toString() == "MainChat") {
+            val i = Intent(this, MainActivity::class.java)
+            startActivity(i)
+        } else {
+            val i = Intent(this, PrivateChat::class.java)
+            i.putExtra("emailOpponent", intent.extras!!.get("email").toString())
+            startActivity(i)
+        }
+
     }
 }

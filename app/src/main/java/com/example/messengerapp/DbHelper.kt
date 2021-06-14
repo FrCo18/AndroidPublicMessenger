@@ -21,6 +21,7 @@ class DbHelper() {
                                 userInfo.name,
                                 userInfo.secName,
                                 userInfo.location,
+                                userInfo.chatKeyList,
                                 status
                             )
                         )
@@ -33,6 +34,7 @@ class DbHelper() {
                             "",
                             "",
                             "",
+                            null,
                             "online"
                         )
                     )

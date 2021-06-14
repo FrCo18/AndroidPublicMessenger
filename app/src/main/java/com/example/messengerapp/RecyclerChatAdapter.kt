@@ -3,6 +3,7 @@ package com.example.messengerapp
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -18,13 +19,21 @@ class RecyclerChatAdapter(
         var imageView: ImageView? = null
         var title: TextView? = null
         var message: TextView? = null
+        var btnContextMenu: Button = itemView.findViewById(R.id.btnDeleteMsg)
 
         init {
             imageView = itemView.findViewById(R.id.imChatItem)
             title = itemView.findViewById(R.id.tvName)
             message = itemView.findViewById(R.id.tvMessage)
+            btnContextMenu.setOnClickListener {
+                val position = adapterPosition
+                if (position != RecyclerView.NO_POSITION) {
+                    listener.onDeleteClick(position)
+                }
+            }
             itemView.setOnClickListener(this)
         }
+
 
         override fun onClick(v: View?) {
             val position = adapterPosition
@@ -36,6 +45,7 @@ class RecyclerChatAdapter(
 
     interface OnItemClickListener {
         fun onItemClick(position: Int)
+        fun onDeleteClick(position: Int)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerViewHolder {
@@ -49,6 +59,7 @@ class RecyclerChatAdapter(
         holder.imageView!!.setImageResource(item.imageView!!)
         holder.title!!.text = item.title!!
         holder.message!!.text = item.message!!
+        holder.btnContextMenu!!.visibility = item.visibilityContext!!
     }
 
     override fun getItemCount() = list.size
