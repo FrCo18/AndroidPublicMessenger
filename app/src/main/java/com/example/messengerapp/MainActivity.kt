@@ -97,7 +97,6 @@ class MainActivity : AppCompatActivity(), RecyclerChatAdapter.OnItemClickListene
         val obj = object : ValueEventListener {
 
             override fun onDataChange(snapshot: DataSnapshot) {
-
                 val listClone: ArrayList<ChatItem> = ArrayList()
                 val keysClone: ArrayList<String> = ArrayList()
                 if (chatList!!.size > 0) {
@@ -137,6 +136,7 @@ class MainActivity : AppCompatActivity(), RecyclerChatAdapter.OnItemClickListene
                     }
                     customAdapter!!.notifyDataSetChanged()
                 }
+                customAdapter!!.notifyDataSetChanged()
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -176,7 +176,6 @@ class MainActivity : AppCompatActivity(), RecyclerChatAdapter.OnItemClickListene
 
     override fun onDeleteClick(position: Int) {
         db!!.child(keysList!![position]).removeValue()
-
     }
 
     override fun onStart() {

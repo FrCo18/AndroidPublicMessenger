@@ -240,7 +240,7 @@ class PrivateChat : AppCompatActivity(), RecyclerChatAdapter.OnItemClickListener
                         if (chatItem.keyChat == chatKey) {
                             if (chatItem.chat != null) {
                                 if (positionDel != null) {
-                                    val listCloneDel = chatItem.chat!!
+                                    var listCloneDel = chatItem.chat!!
                                     var i = listCloneDel.size - 1
                                     if (i >= 0) {
                                         listClone.clear()
@@ -250,6 +250,24 @@ class PrivateChat : AppCompatActivity(), RecyclerChatAdapter.OnItemClickListener
                                         }
                                     }
                                     listClone.removeAt(positionDel)
+                                    listCloneDel.clear()
+                                    listClone.forEach {
+                                        listCloneDel.add(ChatItem(
+                                            R.drawable.profile_icon,
+                                            it.title,
+                                            it.message!!.trim()
+                                        ))
+                                    }
+                                    listClone.clear()
+                                    i = listCloneDel.size - 1
+                                    if (i >= 0) {
+                                        listClone.clear()
+                                        while (i >= 0) {
+                                            listClone.add(listCloneDel[i])
+                                            i--
+                                        }
+                                    }
+                                    val k = 0;
                                 } else {
                                     listClone = chatItem.chat!!
                                     listClone.add(
