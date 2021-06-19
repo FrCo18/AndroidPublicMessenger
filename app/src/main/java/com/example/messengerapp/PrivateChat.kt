@@ -218,6 +218,7 @@ class PrivateChat : AppCompatActivity(), RecyclerChatAdapter.OnItemClickListener
                 }
 
                 pushMessage()
+                customAdapter.notifyDataSetChanged()
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -304,6 +305,7 @@ class PrivateChat : AppCompatActivity(), RecyclerChatAdapter.OnItemClickListener
                 }
 
                 edMessage.text.clear()
+                getMessages()
             }
 
             override fun onCancelled(error: DatabaseError) {
