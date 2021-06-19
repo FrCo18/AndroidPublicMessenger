@@ -77,7 +77,9 @@ class MainActivity : AppCompatActivity(), RecyclerChatAdapter.OnItemClickListene
                     startActivity(i)
                 }
                 R.id.item_logout -> {
-                    Toast.makeText(applicationContext, "Clicked item 1", Toast.LENGTH_SHORT).show()
+                    mAuth!!.signOut()
+                    val i = Intent(this, AuthActivity::class.java)
+                    startActivity(i)
                 }
             }
             true
